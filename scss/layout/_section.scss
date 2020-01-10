@@ -1,0 +1,46 @@
+section {
+  margin-bottom: 5rem;
+}
+
+
+/* Introduction */
+
+#intro {
+  p {
+    max-width: 66%;
+    margin: 0 auto;
+  }
+}
+
+
+/* Competences */
+
+#competences {
+  background-color: black;
+  color: white;
+  img {
+    height: 100px;
+    margin-top: 2rem;
+  }
+}
+
+/* Experiences & Etudes */
+
+#experiences {
+  h2 {
+    text-align: left;
+    margin-left: 7.5%;
+  }
+}
+
+.dates {
+  display: inline-block;
+  width: 135px;
+}
+
+.material-icons {
+  font-size: 1rem !important;
+  width: 1rem;
+  margin-top: 2px;
+  margin: 0 1rem;
+}

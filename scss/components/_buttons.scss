@@ -1,0 +1,15 @@
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    .btn {
+        color: white;
+        background-color: black;
+        padding: 1rem;
+        margin: 1rem;
+        width: 150px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
