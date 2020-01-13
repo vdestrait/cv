@@ -20,7 +20,16 @@ section {
   color: white;
   img {
     height: 100px;
-    margin-top: 2rem;
+  }
+  p {
+    margin: 0 0 1rem;
+  }
+  .languages {
+    width: 100px;
+    display: inline-block;
+  }
+  .skill-set{
+    margin-bottom: 2rem;;
   }
 }
 
@@ -35,12 +44,12 @@ section {
 
 .dates {
   display: inline-block;
-  width: 135px;
+  width: 145px;
 }
 
 .material-icons {
   font-size: 1rem !important;
   width: 1rem;
   margin-top: 2px;
-  margin: 0 1rem;
+  margin: 0 1rem 0 0;
 }
