@@ -2,5 +2,9 @@ footer {
     text-align: center;
     color: white;
     background-color: black;
-    padding: 1rem;
+    padding: 0.25rem 1rem;
+    a {
+        color: white;
+        text-decoration: none;
+    }
 }

@@ -15,10 +15,10 @@ header#header {
       margin: 8px 0 0 10px;
       font-size: 0.875rem;
     }
-    a {
-      color: white;
-      text-decoration: none;
-    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
   }
   .data-block {
     display: inline-block;
@@ -31,6 +31,10 @@ header#header {
       li {
         display: inline;
         margin: 1rem;
+        a {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
       }
     }
     a {
