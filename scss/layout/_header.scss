@@ -1,10 +1,11 @@
 header#header {
   background-color: #000;
   color: white;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .flex {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
   img {
     height: 130px;
   }
@@ -23,7 +24,29 @@ header#header {
   .data-block {
     display: inline-block;
   }
-  nav {
+  #nav-md {
+    display: none;
+  }
+  @include md-up {
+    #nav-sm {
+      display: none;
+    }
+    #nav-md {
+      display: block;
+    }
+  }
+  nav#nav-sm {
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      padding-left: 0;
+      li {
+        border: 1px solid white;
+      }
+    }
+  }
+  nav#nav-md {
     ul {
       list-style-type: none;
       text-align: center;

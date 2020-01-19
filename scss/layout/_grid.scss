@@ -1,20 +1,30 @@
-.clearfix {
-  clear: both;
-}
-
 .flex {
   display: flex;
 }
-
-.one-third {
-  width: 33%;
+.flex-md {
+  @include md-up {
+    display: flex;
+  }
 }
 
-.two-thirds {
-  width: 67%;
+.one-third-md {
+  width: 100%;
+  @include md-up {
+    width: 33%;
+  }
 }
 
-.half {
-  width: 50%;
-  padding: 0 2%;
+.two-thirds-md {
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 67%;
+  }
+}
+
+.half-md {
+  width: 100%;
+  @include md-up {
+    width: 50%;
+    padding: 0 2%;
+  }
 }

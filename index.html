@@ -2,8 +2,10 @@
 <html>
 
 <head>
+    
     <title>Curriculum Vitae</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,23 +14,33 @@
 
 <body>
     <header id="header" role="banner">
-        <img src="img/val.jpg" alt="Photo de Valentine">
+        <div class="flex">
+            <img src="img/val.jpg" alt="Photo de Valentine">
+    
+            <nav id="nav-md">
+                <ul>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#experiences">Expériencs</a></li>
+                    <li><a href="#etudes">Études</a></li>
+                </ul>
+            </nav>
+    
+            <div class="personal-data">
+                <p>Valentine Destrait</br>
+                    Née le 28 mai 1985</br>
+    
+                <a href="mailto:valentinedestrait@hotmail.com">valentinedestrait@hotmail.com</a></br>
+                <a href="tel:+32486335541">+32 486 33 55 41</a></p>
+            </div>
+        </div>
         
-        <nav>
+        <nav id="nav-sm">
             <ul>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#experiences">Expériencs</a></li>
                 <li><a href="#etudes">Études</a></li>
             </ul>
         </nav>
-
-        <div class="personal-data">
-            <p>Valentine Destrait</br>
-                Née le 28 mai 1985</br>
-
-            <a href="mailto:valentinedestrait@hotmail.com">valentinedestrait@hotmail.com</a></br>
-            <a href="tel:+32486335541">+32 486 33 55 41</a></p>
-        </div>
 
     </header>
     <main>
@@ -44,23 +56,23 @@
             </div>
         </section>
 
-        <div class="flex">
-            <section id="competences" class="one-third">
+        <div class="flex-md">
+            <section id="competences" class="full-sm one-third-md">
                 <div class="container">
                     <h2>Compétences</h2>
     
                     <div class="skill-set flex">
-                        <div class="one-third">
+                        <div class="one-third-md">
                             <img src="img/informatique-w.svg" alt="" class="head">
                         </div>
         
-                        <div class="two-thirds">
+                        <div class="two-thirds-md">
                             <h3 class="lang-infor">Informatique</h3>
                             <h4>Languages</h4>
                             <p>HTML5, CSS3, SASS, JavaScript ES6, PHP, MySQL, Processing</p>
         
                             <h4>Librairies &amp; Frameworks</h4>
-                            <p>Bootstrap, MaterialzeCSS, JQuery, Ramda, Math.js, REACT</p>
+                            <p>Bootstrap, MaterialzeCSS, Animate.CSS, JQuery, Ramda, Math.js, REACT</p>
         
                             <h4>Outils</h4>
                             <p>GIT, Node.js, PHPMyAdmin, CMS WordPress</p>
@@ -68,22 +80,22 @@
                     </div>
     
                     <div class="skill-set flex">
-                        <div class="one-third">
+                        <div class="one-third-md">
                             <img src="img/logiciels-w.svg" alt="" class="head">
                         </div>
         
-                        <div class="two-thirds">
+                        <div class="two-thirds-md">
                             <h3 class="software">Logiciels &amp; Autres Apps</h3>
                             <p>MS Office/Office 365, G Suite, Trello, Asana, Sketch, Zepplin, Adobe Creative : Photoshop, InDesign, Illustrator, XD</p>
                         </div>
                     </div>
 
                     <div class="skill-set flex">
-                        <div class="one-third">
+                        <div class="one-third-md">
                             <img src="img/langues-w.svg" alt="" class="head">
                         </div>
         
-                        <div class="two-thirds">
+                        <div class="two-thirds-md">
                             <h3 class="lang">Langues</h3>
         
                             <p>
@@ -97,7 +109,7 @@
                 </div>
             </section>
     
-            <section id="experiences" class="two-thirds">
+            <section id="experiences" class="two-thirds-md">
                 <div class="container">
                     <h2>Expériences</h2>
                     <dl>
@@ -149,7 +161,7 @@
 
                 <h2>Études &amp; Formations</h2>
                 <div class="flex">
-                    <div class="half">
+                    <div class="half-md">
                         <h3>Études</h3>
                         <dl>
                             <dt><span class="dates">09/2008 - 09/2010</span><i class="material-icons">school</i><span>Université Libre de Bruxelles, Bruxelles</span></dt>
@@ -177,7 +189,7 @@
                             <dd>Certificat d’Enseignement Secondaire Supérieur, cours à option : Grec et Allemand</dd>
                         </dl>
                     </div>
-                    <div class="half">
+                    <div class="half-md">
                         <h3>Autres formations</h3>
                         <dl>
                             <dt><span class="dates">04/2019 - 05/2020</span><i class="material-icons">school</i><span>Interface 3, Bruxelles</span></dt>
