@@ -2,7 +2,6 @@ section {
   margin-bottom: 5rem;
 }
 
-
 /* Introduction */
 
 #intro {
@@ -11,7 +10,6 @@ section {
     margin: 0 auto;
   }
 }
-
 
 /* Competences */
 
@@ -28,8 +26,14 @@ section {
     width: 100px;
     display: inline-block;
   }
-  .skill-set{
-    margin-bottom: 2rem;;
+  .skill-set {
+    margin-bottom: 2rem;
+  }
+  .head {
+    visibility: hidden;
+  }
+  .head.animated {
+    visibility: visible;
   }
 }
 

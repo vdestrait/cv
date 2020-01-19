@@ -17,11 +17,12 @@
   },
   "homepage": "https://github.com/ahmadawais/WPSass#readme",
   "devDependencies": {
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
     "animate.css": "^3.7.2",
+    "jquery": "^3.4.1",
     "star-rating-svg": "^3.5.0"
   }
 }
