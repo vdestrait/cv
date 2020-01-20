@@ -1,5 +1,5 @@
 section {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 /* Introduction */
@@ -22,27 +22,30 @@ section {
   color: white;
   position: fixed;
   width: 40px;
-  height: 400px;
+  height: 250px;
   left: 0;
-  bottom: 10px;
-  transition: width 1s ease-out;
+  top: 25%;
+  transition: width 0.5s ease-out;
   #open-icon {
     font-size: 2rem !important;
     padding: 0.5rem;
     position: fixed;
   }
   h2 {
-    transform: rotate(-90deg) translate(-235px, 0);
-    font-size: 2rem;
+    transform: rotate(-90deg) translate(-165px, 0);
+    font-size: 1.5rem;
     cursor: pointer;
   }
   .skill-set {
     display: none;
   }
   &.open {
+    background-color: black;
+    color: white;
     overflow-y: scroll;
     box-shadow: 0px 0px 15px 1px #999;
     width: 90%;
+    height: 60%;
     .container {
       padding-left: 0;
       h2 {
@@ -57,7 +60,7 @@ section {
           visibility: hidden;
           &.animated {
             visibility: visible;
-          } 
+          }
         }
       }
     }
@@ -89,10 +92,11 @@ section {
   }
 }
 
-
 /* Experiences & Etudes */
 
 #experiences {
+  background-color: #fafafa;
+  padding: 1rem 0;
   @include md-up {
     h2 {
       text-align: left;

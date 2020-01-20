@@ -4,20 +4,31 @@ header#header {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 9;
+  .material-icons {
+    font-size: 2.5rem !important;
+    position: absolute;
+    padding: 10px 50px 20px 10px;
+    cursor: pointer;
+    z-index: 99;
+    &.open-menu {
+      color: black;
+    }
+  }
   .flex {
     position: relative;
     justify-content: space-between;
     align-items: center;
   }
   img {
-    height: 103px;
+    height: 108px;
     @include md-up {
       height: 130px;
     }
   }
   .personal-data {
     text-align: right;
-    padding: .5rem;
+    padding: 0.5rem;
     p {
       margin: 0;
       font-size: 0.875rem;
@@ -36,7 +47,26 @@ header#header {
   .data-block {
     display: inline-block;
   }
-  #nav-md {
+
+  nav#nav-sm {
+    background-color: white;
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      li {
+        a {
+          display: block;
+          margin: 0 0.5rem;
+          padding: 1rem;
+          width: 120px;
+        }
+      }
+    }
+  }
+  #nav-md,
+  #nav-sm {
     display: none;
   }
   @include md-up {
@@ -45,24 +75,6 @@ header#header {
     }
     #nav-md {
       display: block;
-    }
-  }
-  nav#nav-sm {
-    background-color: white;
-    ul {
-      list-style-type: none;
-      display: flex;
-      justify-content: center;
-      padding-left: 0;
-      margin: 0;
-      li {
-        a {
-          display: block;
-          margin: 0 .25rem;
-          width: 120px;
-        }
-        
-      }
     }
   }
   nav#nav-md {
