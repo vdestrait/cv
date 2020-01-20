@@ -1,20 +1,32 @@
 header#header {
   background-color: #000;
   color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
   .flex {
     position: relative;
     justify-content: space-between;
     align-items: center;
   }
   img {
-    height: 130px;
+    height: 103px;
+    @include md-up {
+      height: 130px;
+    }
   }
   .personal-data {
     text-align: right;
-    padding: 1rem 1.5rem;
+    padding: .5rem;
     p {
-      margin: 8px 0 0 10px;
+      margin: 0;
       font-size: 0.875rem;
+    }
+    @include md-up {
+      padding: 1rem 1.5rem;
+      p {
+        margin: 8px 0 0 10px;
+      }
     }
   }
   a {
@@ -36,13 +48,20 @@ header#header {
     }
   }
   nav#nav-sm {
+    background-color: white;
     ul {
       list-style-type: none;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       padding-left: 0;
+      margin: 0;
       li {
-        border: 1px solid white;
+        a {
+          display: block;
+          margin: 0 .25rem;
+          width: 120px;
+        }
+        
       }
     }
   }

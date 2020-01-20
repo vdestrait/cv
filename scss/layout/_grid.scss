@@ -6,12 +6,19 @@
     display: flex;
   }
 }
+.one-third {
+  width: 33%;
+}
 
 .one-third-md {
   width: 100%;
   @include md-up {
     width: 33%;
   }
+}
+
+.two-thirds {
+  width: 67%;
 }
 
 .two-thirds-md {

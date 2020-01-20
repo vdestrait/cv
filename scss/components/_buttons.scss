@@ -2,21 +2,28 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
-    .btn {
-        color: white;
-        background-color: black;
+}
+
+.btn {
+    color: white;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    margin: .25rem;
+    width: 150px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: $bold-sm;
+    &.animated {
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+    }
+    @include md-up {
         padding: 1rem;
         margin: 1rem;
-        width: 150px;
-        text-align: center;
+        font-weight: $bold-md;
         font-size: 1.5rem;
-        font-weight: 700;
-        &.animated {
-            animation-duration: 1.5s;
-            animation-timing-function: ease;
-        }
     }
-    .btn:hover {
-        box-shadow: 0px 0px 15px 1px #999;
-    }
+}
+.btn:hover {
+    box-shadow: 0px 0px 15px 1px #999;
 }

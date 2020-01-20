@@ -5,44 +5,99 @@ section {
 /* Introduction */
 
 #intro {
-  p {
-    max-width: 66%;
-    margin: 0 auto;
+  @include md-up {
+    p {
+      max-width: 66%;
+      margin: 0 auto;
+    }
   }
 }
 
 /* Competences */
 
+// Mobile
+
 #competences {
   background-color: black;
   color: white;
-  img {
-    height: 100px;
+  position: fixed;
+  width: 40px;
+  height: 400px;
+  left: 0;
+  bottom: 10px;
+  transition: width 1s ease-out;
+  #open-icon {
+    font-size: 2rem !important;
+    padding: 0.5rem;
+    position: fixed;
   }
-  p {
-    margin: 0 0 1rem;
-  }
-  .languages {
-    width: 100px;
-    display: inline-block;
+  h2 {
+    transform: rotate(-90deg) translate(-235px, 0);
+    font-size: 2rem;
+    cursor: pointer;
   }
   .skill-set {
-    margin-bottom: 2rem;
+    display: none;
   }
-  .head {
-    visibility: hidden;
-  }
-  .head.animated {
-    visibility: visible;
+  &.open {
+    overflow-y: scroll;
+    box-shadow: 0px 0px 15px 1px #999;
+    width: 90%;
+    .container {
+      padding-left: 0;
+      h2 {
+        font-size: 2.5rem;
+        transform: rotate(0deg) translate(0, 0);
+      }
+      .skill-set {
+        display: flex;
+        .head {
+          height: 50px;
+          margin-top: 10px;
+          visibility: hidden;
+          &.animated {
+            visibility: visible;
+          } 
+        }
+      }
+    }
   }
 }
+
+// Tablet & Desktop
+@include md-up {
+  #competences {
+    img {
+      height: 100px;
+    }
+    p {
+      margin: 0 0 1rem;
+    }
+    .languages {
+      width: 100px;
+      display: inline-block;
+    }
+    .skill-set {
+      margin-bottom: 2rem;
+    }
+    .head {
+      visibility: hidden;
+    }
+    .head.animated {
+      visibility: visible;
+    }
+  }
+}
+
 
 /* Experiences & Etudes */
 
 #experiences {
-  h2 {
-    text-align: left;
-    margin-left: 7.5%;
+  @include md-up {
+    h2 {
+      text-align: left;
+      margin-left: 7.5%;
+    }
   }
 }
 

@@ -4,8 +4,14 @@ body {
 }
 
 h1, h2 {
-  font-size: 4rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
   text-align: center;
+  font-weight: $bold-sm;
+  @include md-up {
+    font-size: 4rem;
+    font-weight: $bold-md;
+  }
 }
 
 h3 {
@@ -15,6 +21,10 @@ h3 {
 
 h4 {
   margin: 0;
-  font-weight: 600;
-  font-size: 1.25rem;
+  font-weight: $bold-sm;
+  font-size: 1rem;
+  @include md-up {
+    font-weight: $bold-md;
+    font-size: 1.25rem;
+  }
 }
