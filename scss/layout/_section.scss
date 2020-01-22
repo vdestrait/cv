@@ -70,6 +70,14 @@ section {
 // Tablet & Desktop
 @include md-up {
   #competences {
+    width: 33%;
+    height: auto;
+    position: relative;
+
+    h2 {
+      font-size: 4rem;
+      transform: rotate(0deg) translate(0, 0);
+    }
     img {
       height: 100px;
     }
@@ -82,6 +90,7 @@ section {
     }
     .skill-set {
       margin-bottom: 2rem;
+      display: flex;
     }
     .head {
       visibility: hidden;
