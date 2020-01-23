@@ -26,18 +26,30 @@ section {
   left: 0;
   top: 25%;
   transition: width 0.5s ease-out;
+  overflow: hidden;
   #open-icon {
     font-size: 2rem !important;
-    padding: 0.5rem;
+    padding: 0.5rem 5rem 3rem 0.5rem;
     position: fixed;
+    cursor: pointer;
   }
   h2 {
     transform: rotate(-90deg) translate(-165px, 0);
     font-size: 1.5rem;
     cursor: pointer;
   }
+  h3 {
+    display: none;
+  }
   .skill-set {
     display: none;
+    .head{
+      margin-bottom: 30px;
+    }
+  }
+  .languages {
+    width: 100px;
+    display: inline-block;
   }
   &.open {
     background-color: black;
@@ -48,19 +60,28 @@ section {
     height: 60%;
     .container {
       padding-left: 0;
+      max-width: 75%;
       h2 {
         font-size: 2.5rem;
         transform: rotate(0deg) translate(0, 0);
       }
+      .accordion {
+        cursor: pointer;
+        transition: 1s;
+      }
       .skill-set {
         display: flex;
+        
         .head {
           height: 50px;
-          margin-top: 10px;
           visibility: hidden;
           &.animated {
             visibility: visible;
           }
+        }
+        .panel {
+          display: none;
+          overflow: hidden;
         }
       }
     }
@@ -70,21 +91,31 @@ section {
 // Tablet & Desktop
 @include md-up {
   #competences {
+    position: relative;
+    width: auto;
+    height: auto;
+    #open-icon {
+      display: none;
+    }
+    h2 {
+      transform: rotate(0deg) translate(0, 0);
+      font-size: 4rem;
+      cursor: none;
+    }
     img {
       height: 100px;
     }
     p {
       margin: 0 0 1rem;
     }
-    .languages {
-      width: 100px;
-      display: inline-block;
-    }
     .skill-set {
       margin-bottom: 2rem;
+      display: flex;
+      margin: 20px;
     }
     .head {
       visibility: hidden;
+      margin-top: 10px;
     }
     .head.animated {
       visibility: visible;
