@@ -8,15 +8,22 @@ h1, h2 {
   line-height: 1.2;
   text-align: center;
   font-weight: $bold-sm;
+  margin: 1rem 0;
   @include md-up {
-    font-size: 4rem;
     font-weight: $bold-md;
+  }
+  @include lg-up {
+    font-size: 4rem;
   }
 }
 
 h3 {
   font-size: 1.5rem;
   margin: 0;
+  font-weight: $bold-sm;
+  @include md-up {
+    font-weight: $bold-md;
+  }
 }
 
 h4 {

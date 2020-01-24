@@ -81,10 +81,20 @@ $(document).ready(function() {
       if($(this).hasClass('active')){
         $(this).next().slideUp();
         $(this).toggleClass('active');
+        $(this).find('.material-icons').text("keyboard_arrow_down"); 
+         
       } else {
         $(this).next().slideDown();
         $(this).toggleClass('active');
+        $(this).find('.material-icons').text("keyboard_arrow_up");   
       }
     })
   }
+});
+
+// Scroll TOP btn
+$(document).ready(function() {
+  $('.btn-top').on('click', function () {
+    $("html, body").animate({scrollTop: 0}, 1000);
+  });
 });
