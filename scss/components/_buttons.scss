@@ -45,4 +45,7 @@
         transform: translateY(9px);
         
     }
+    @include md-up {
+        display: none;
+    }
 }
