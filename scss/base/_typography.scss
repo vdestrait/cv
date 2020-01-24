@@ -8,7 +8,7 @@ h1, h2 {
   line-height: 1.2;
   text-align: center;
   font-weight: $bold-sm;
-  margin: 1rem 0;
+  margin: 2rem 0;
   @include md-up {
     font-weight: $bold-md;
   }
