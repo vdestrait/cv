@@ -2,6 +2,18 @@ section {
   margin-bottom: 3rem;
 }
 
+.dates {
+  display: inline-block;
+  width: 145px;
+}
+
+.material-icons {
+  font-size: 1rem !important;
+  width: 1rem;
+  margin-top: 2px;
+  margin: 0 1rem 0 0;
+}
+
 /* Introduction */
 
 #intro {
@@ -17,7 +29,7 @@ section {
 
 // Mobile
 
-#competences {
+#competences-section {
   background-color: black;
   color: white;
   position: fixed;
@@ -26,18 +38,35 @@ section {
   left: 0;
   top: 25%;
   transition: width 0.5s ease-out;
+  overflow: hidden;
   #open-icon {
     font-size: 2rem !important;
-    padding: 0.5rem;
+    padding: 0.5rem 5rem 3rem 0.5rem;
     position: fixed;
+    cursor: pointer;
   }
   h2 {
     transform: rotate(-90deg) translate(-165px, 0);
     font-size: 1.5rem;
     cursor: pointer;
   }
+  
   .skill-set {
     display: none;
+    .head{
+      margin-bottom: 30px;
+    }
+    i {
+      margin-left: 50px;
+      margin-bottom: 15%;
+      @include md-up {
+        display: none;
+      }
+    }
+    .languages {
+      width: 100px;
+      display: inline-block;
+    }
   }
   &.open {
     background-color: black;
@@ -46,29 +75,45 @@ section {
     box-shadow: 0px 0px 15px 1px #999;
     width: 90%;
     height: 60%;
+    z-index: 9;
     .container {
       padding-left: 0;
+      max-width: 75%;
       h2 {
         font-size: 2.5rem;
         transform: rotate(0deg) translate(0, 0);
       }
+      .accordion {
+        cursor: pointer;
+        transition: 1s;
+      }
       .skill-set {
         display: flex;
+        
         .head {
           height: 50px;
-          margin-top: 10px;
           visibility: hidden;
           &.animated {
             visibility: visible;
           }
         }
+        .panel {
+          display: none;
+          overflow: hidden;
+        }
       }
     }
+  }
+}
+@include sm-down {
+  section#competences-section {
+    padding: 0;
   }
 }
 
 // Tablet & Desktop
 @include md-up {
+<<<<<<< HEAD
   #competences {
     width: 33%;
     height: auto;
@@ -77,23 +122,43 @@ section {
     h2 {
       font-size: 4rem;
       transform: rotate(0deg) translate(0, 0);
+=======
+  #competences-section {
+    position: relative;
+    width: auto;
+    height: auto;
+    #open-icon {
+      display: none;
+    }
+    .container {
+      max-width: 100%;
+    }
+    h2 {
+      transform: rotate(0deg) translate(0, 0);
+      font-size: 2.5rem;
+      cursor: none;
+>>>>>>> master
     }
     img {
-      height: 100px;
+      height: auto;
     }
     p {
       margin: 0 0 1rem;
     }
-    .languages {
-      width: 100px;
-      display: inline-block;
-    }
     .skill-set {
       margin-bottom: 2rem;
       display: flex;
+<<<<<<< HEAD
+=======
+      margin: 20px;
+      i {
+        display: none;
+      }
+>>>>>>> master
     }
     .head {
       visibility: hidden;
+      margin-top: 10px;
     }
     .head.animated {
       visibility: visible;
@@ -101,9 +166,22 @@ section {
   }
 }
 
+@include lg-up {
+  #competences-section {
+    h2 {
+      font-size: 4rem;
+      margin: 3rem 0;
+    }
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+}
+
 /* Experiences & Etudes */
 
-#experiences {
+#experiences-section {
   background-color: #fafafa;
   padding: 1rem 0;
   @include md-up {
@@ -114,14 +192,3 @@ section {
   }
 }
 
-.dates {
-  display: inline-block;
-  width: 145px;
-}
-
-.material-icons {
-  font-size: 1rem !important;
-  width: 1rem;
-  margin-top: 2px;
-  margin: 0 1rem 0 0;
-}

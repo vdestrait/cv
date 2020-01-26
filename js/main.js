@@ -56,21 +56,45 @@ $(document).ready(function() {
 // Mobile Slide-In #competences
 $(document).ready(function() {
   if (window.innerWidth < 767) {
-    $("#competences").on("click", function() {
-      if ($(this).hasClass("open")) {
-        $(this).removeClass("open");
-        $(this)
-          .find("#open-icon")
-          .text("keyboard_arrow_right");
+    $("#open-icon").on("click", function() {
+      if ($(this).parent().hasClass("open")) {
+        $(this).parent().removeClass("open");
+        $(this).text("keyboard_arrow_right");  
+        $('body').css({overflow:'scroll'});
       } else {
-        $(this).addClass("open");
-        $(this)
-          .find("#open-icon")
-          .text("close");
+        $(this).parent().addClass("open");
+        $('body').css({overflow:'hidden'});
+        $(this).text("close");
         setTimeout(function() {
           $(".head").addClass("animated rollIn");
+          $("h3").fadeIn("slow");
         }, 500);
       }
     });
   }
+});
+
+// Accordion for Mobile in #competences
+$(document).ready(function() {
+  if (window.innerWidth < 767) {
+    $('.accordion').on('click', function(){
+      if($(this).hasClass('active')){
+        $(this).next().slideUp();
+        $(this).toggleClass('active');
+        $(this).find('.material-icons').text("keyboard_arrow_down"); 
+         
+      } else {
+        $(this).next().slideDown();
+        $(this).toggleClass('active');
+        $(this).find('.material-icons').text("keyboard_arrow_up");   
+      }
+    })
+  }
+});
+
+// Scroll TOP btn
+$(document).ready(function() {
+  $('.btn-top').on('click', function () {
+    $("html, body").animate({scrollTop: 0}, 1000);
+  });
 });

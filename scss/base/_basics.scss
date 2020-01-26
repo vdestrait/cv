@@ -9,10 +9,11 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
+  font-family: $default-font;
 }
 
 .container {
-  max-width: 70%;
+  max-width: 65%;
   margin: 0 auto;
   @include md-up {
     max-width: 80%;
@@ -22,4 +23,11 @@ body {
 .material-icons.arrow {
   vertical-align: top;
   margin-top: 5px;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -130px;
+  visibility: hidden;
 }

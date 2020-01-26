@@ -6,5 +6,12 @@ footer {
     a {
         color: white;
         text-decoration: none;
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+    p {
+        margin: 1rem 0;
     }
 }
